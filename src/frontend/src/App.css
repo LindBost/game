@@ -1,5 +1,19 @@
+@font-face {
+  font-family: 'Tele2Sans-Light';
+  src: local('Tele2 Sans Light'), local('Tele2Sans-Light');
+  src: url('./fonts/Tele2Sans/Webfonts/WOFF/Tele2Sans-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Tele2Sans-Medium';
+  src: local('Tele2 Sans Medium'), local('Tele2Sans-Medium');
+  src: url('./fonts/Tele2Sans/Webfonts/WOFF/Tele2Sans-Medium.woff') format('woff');
+}
+
 .container {
-  background-color: #000000;
+  background: url('./T2backgrounds/Dark/1200x800/T2_rgb_dark_1200x800_1.jpg');
+  font-family: Tele2Sans-Light;
+  background-size: cover;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,6 +39,7 @@ h2 {
   font-size: 22px;
   cursor: pointer;
   transition: ease-in-out, width 0.35s ease-in-out;
+  font-family: Tele2Sans-Medium;
 }
 
 .answer.selected {
@@ -79,4 +94,32 @@ h2 {
   color: #d7dee8;
   background-color: #2a55c2;
   font-weight: bold;
+}
+
+.submitBtn {
+  color: #d7dee8;
+  background-color: #2a55c2;
+  font-weight: bold;
+}
+
+.form {
+  width : 150px;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 20px 5px;
+}
+
+.info {
+  white-space: nowrap;
+  font-size: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 221px;
 }

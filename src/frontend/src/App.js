@@ -15,7 +15,7 @@ import {
 } from './reducers/types.js';
 import quizReducer from './reducers/QuizReducer';
 import './App.css';
-import logo from './tele2logo.png';
+import logo from './Tele2_Logo_White.svg'
 
 function App() {
     const questions = [
@@ -30,6 +30,7 @@ function App() {
             answer_d: '0',
             correct_answer: 'c',
         },
+        /*
         {
             id: 2,
             question: 'Which one is not a Hook?',
@@ -57,6 +58,7 @@ function App() {
             answer_d: '6',
             correct_answer: 'c',
         },
+        */
     ];
 
     const [subForm, setSubForm] = useState(false);
@@ -108,6 +110,7 @@ function App() {
     const restart = () => {
         dispatch({type: RESET_QUIZ});
     };
+    
     const submitMail = () => {
       console.log("here");
       setSubForm(true);
@@ -139,7 +142,7 @@ function App() {
     if (showResults) {
         return (
             <div className="container results">
-                <img src={logo} alt="“website logo”" />
+                <img className="logo" src={logo} alt="“website logo”" />
                 <h2>Results</h2>
                 <ul>{renderResultsData()}</ul>
                 <button className="btn btn-primary" onClick={restart}>
@@ -149,16 +152,16 @@ function App() {
                     Submit mail
                 </button>
                 {subForm ?
-           <Form /> :
-           null
-        }
+                    <Form /> :
+                    null
+                }
             </div>
         );
     } else {
         return (
             <QuizContext.Provider value={{state, dispatch}}>
                 <div className="container">
-                <img src={logo} alt="“website logo”" />
+                <img className="logo" src={logo} alt="“website logo”" />
                     <Progress
                         total={questions.length}
                         current={currentQuestion + 1}
