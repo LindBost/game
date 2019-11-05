@@ -1,4 +1,4 @@
-import React, {useReducer} from 'react';
+import React, {useReducer, useState} from 'react';
 import Progress from './components/Progress';
 import Question from './components/Question';
 import Answers from './components/Answers';
@@ -59,6 +59,8 @@ function App() {
         },
     ];
 
+    const [subForm, setSubForm] = useState(false);
+
     const initialState = {
         questions,
         currentQuestion: 0,
@@ -108,6 +110,7 @@ function App() {
     };
     const submitMail = () => {
       console.log("here");
+      setSubForm(true);
     };
 
     const next = () => {
@@ -145,6 +148,10 @@ function App() {
                 <button className="btn btn-primary" onClick={submitMail}>
                     Submit mail
                 </button>
+                {subForm ?
+           <Form /> :
+           null
+        }
             </div>
         );
     } else {
