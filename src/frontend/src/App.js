@@ -111,7 +111,8 @@ function App() {
         dispatch({type: RESET_QUIZ});
     };
     
-    const submitMail = () => {
+    const submitMail = (event) => {
+        event.preventDefault();
       console.log("here");
       setSubForm(true);
     };
@@ -142,6 +143,8 @@ function App() {
     if (showResults) {
         return (
             <div className="container results">
+                {!subForm && 
+                <>
                 <img className="logo" src={logo} alt="“website logo”" />
                 <h2>Results</h2>
                 <ul>{renderResultsData()}</ul>
@@ -151,10 +154,11 @@ function App() {
                 <button className="btn btn-primary" onClick={submitMail}>
                     Submit mail
                 </button>
-                {subForm ?
-                    <Form /> :
-                    null
+                </>
                 }
+                
+            {subForm && <Form /> }
+                    
             </div>
         );
     } else {
