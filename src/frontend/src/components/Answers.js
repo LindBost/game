@@ -1,40 +1,15 @@
-import React, {useContext} from 'react';
-import Answer from './Answer';
-import QuizContext from '../context/QuizContext';
+import React from 'react';
 
-function Answers() {
-    const {state, dispatch} = useContext(QuizContext);
-    const {currentAnswer, currentQuestion, questions} = state;
-    const question = questions[currentQuestion];
+function Answers(props) {
 
-    return (
-        <>
-            <Answer
-                letter="a"
-                answer={question.answer_a}
-                dispatch={dispatch}
-                selected={currentAnswer === 'a'}
-            />
-            <Answer
-                letter="b"
-                answer={question.answer_b}
-                dispatch={dispatch}
-                selected={currentAnswer === 'b'}
-            />
-            <Answer
-                letter="c"
-                answer={question.answer_c}
-                dispatch={dispatch}
-                selected={currentAnswer === 'c'}
-            />
-            <Answer
-                letter="d"
-                answer={question.answer_d}
-                dispatch={dispatch}
-                selected={currentAnswer === 'd'}
-            />
-        </>
-    );
+  return (
+    <div className="answers">
+      <button className="answer" onClick={() => props.answerChoiceHandler("a")}>{props.question.answer_a}</button>
+      <button className="answer" onClick={() => props.answerChoiceHandler("b")}>{props.question.answer_b}</button>
+      <button className="answer" onClick={() => props.answerChoiceHandler("c")}>{props.question.answer_c}</button>
+      <button className="answer" onClick={() => props.answerChoiceHandler("d")}>{props.question.answer_d}</button>
+    </div>
+  );
 }
 
 export default Answers;

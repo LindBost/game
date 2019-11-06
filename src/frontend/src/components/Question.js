@@ -1,11 +1,28 @@
-import React, {useContext} from 'react';
-import QuizContext from '../context/QuizContext';
+import React from 'react';
+import Answers from "./Answers";
+import QuestionCount from './QuestionCount';
 
-function Question() {
-    const {state} = useContext(QuizContext);
-    const {currentQuestion, questions} = state;
-    const question = questions[currentQuestion];
-    return <h1>{question.question}</h1>;
+function Question(props) {
+
+  let answer = false;
+
+  const answerChoiceHandler = (choice) => {
+    answer = choice;
+  };
+
+  return (
+    <div>
+        <QuestionCount
+        progress={props.progress}
+        totalAmountQuestions={props.questions.length}
+        isFinished={props.isFinished}
+      />
+      <h2 className="question">{props.question.question}</h2>
+      <Answers question={props.question} answerChoiceHandler={answerChoiceHandler}/>
+      <button onClick={() => props.selectAnswerHandler(answer)}>Confirm & Continue</button>
+      {props.errorMessage ? (<p>Please select an answer!</p>) : null}
+    </div>
+  );
 }
 
 export default Question;

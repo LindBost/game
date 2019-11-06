@@ -9,6 +9,7 @@ import axios from 'axios';
 
        const handleSubmit = async(event) => {
             event.preventDefault();
+
             const name = event.target.name.value;
             const email = event.target.email.value;
 
@@ -25,29 +26,23 @@ import axios from 'axios';
                 { headers: { 'Content-Type': 'application/json' } }
             )
             console.log(res);
-          }
-
-          const doneSubmit = () => {
-            
-            console.log("done");
             setSubForm(true);
           }
+          
 
     return(
         <div>
         {!subForm &&
         <form className="form" onSubmit={handleSubmit}>
-            <img className="logo" src={logo} alt="“website logo”" />
             <div className="info">Do you want to learn more about tele2</div>
             <input placeholder="Name" type="text" label="Complete Name:" name="name"/>
             <input placeholder="Email" type="email" label="Email:" name="email"/>
-            <button className="submitBtn" onClick={doneSubmit}>
+            <button className="submitBtn" type='submit'>
                 SUBMIT
             </button>
         </form>
         }
         {subForm && <div>tack</div> }
-        <img className="logo" src={logo} alt="“website logo”" />
         </div>
     );
 }
