@@ -37,8 +37,8 @@ import axios from 'axios';
             <input placeholder="Name" type="text" label="Complete Name:" name="name" className="form" required/>
             <input placeholder="Email" type="email" label="Email:" name="email" className="form" required/>
             <div className="GDPR">
-            <input type="checkbox" name="GDPRcheckbox" required></input>
-                <label className="label">I accept that tele2 can use my personal information to contact me in the future</label>
+            <input type="checkbox" name="GDPRcheckbox" required id="checkbox_id"></input>
+                <label className="label" for="checkbox_id">I accept that Tele2 can use my personal information to contact me in the future</label>
             </div>
             <button className="submitBtn" type='submit'> SUBMIT </button>  
         </form>

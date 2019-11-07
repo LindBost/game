@@ -10,6 +10,9 @@
   src: url('./fonts/Tele2Sans/Webfonts/WOFF/Tele2Sans-Medium.woff') format('woff');
 }
 
+* {
+  box-sizing: border-box;
+}
 
 body {
   background: url('./T2backgrounds/Dark/1200x800/T2_rgb_dark_1200x800_1.jpg');
@@ -17,6 +20,10 @@ body {
   font-family: Tele2Sans-Light;
   color: white;
 
+}
+
+button:hover{
+  transform: scale(1.05) perspective(1px);
 }
 
 .headerContainer {
@@ -57,7 +64,7 @@ body {
 
 .logo {
   height: auto;
-  width: 250px;
+  width: 350px;
 }
 
 .mainContainer {
@@ -96,13 +103,13 @@ body {
 
 .answer:hover {
   transform: scale(1.1) perspective(1px);
-  color: #4f4c4c;
-  background-color: #c8ffbb;
+  color: white;
+  background-color: #2b3e59;
 }
 
 .answer:focus {
-  color: #4f4c4c;
-  background-color: #c8ffbb;
+  color: #ebebeb;
+  background-color: #2b3e59;
 }
 
 .results {
@@ -156,20 +163,20 @@ body {
   cursor: pointer;
   border-radius: 10px;
   outline: none;
+
 }
 
 .form {
   width : 550px;
   height: 50px;
   margin: 10px;
-  box-sizing: border-box;
+ 
   padding: 20px 0px;
   border-radius: 7px;
   outline: none;
 }
 
 .informationForm{
-  white-space: nowrap;
   font-size: 25px;
   text-align: center;
   display: flex;
@@ -177,17 +184,17 @@ body {
 }
 
 .info {
-  white-space: nowrap;
   font-size: 45px;
   text-align: center;
-  display: flex;
-  justify-content: center;
+  margin: 0px 10px 0px 10px;
 }
+
 .label{
   margin-left: 10px;
   font-size: 15px;
 }
-.GDPR{
+
+.GDPR {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -196,10 +203,12 @@ body {
 
 input[type="text"]{
 font-size: 25px;
+padding: 20px;
 }
 
 input[type="email"]{
   font-size: 25px;
+  padding: 20px;
   }
 
   .startGame {

@@ -28,7 +28,7 @@ function Quiz(props) {
       answer_a: 'Aprox 100',
       answer_b: 'Aprox 1000',
       answer_c: 'Aprox 200',
-      answer_d: 'Aprox 2000',
+      answer_d: 'Aprox 3000',
       correct_answer: 'd',
     },
     {
@@ -37,7 +37,7 @@ function Quiz(props) {
       answer_a: 'Telia',
       answer_b: 'ComHem',
       answer_c: 'Telenor',
-      answer_d: 'Boxer',
+      answer_d: 'Viasat',
       correct_answer: 'b',
     },
     {
