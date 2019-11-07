@@ -17,10 +17,10 @@ function Question(props) {
         totalAmountQuestions={props.questions.length}
         isFinished={props.isFinished}
       />
-      <h2 className="question">{props.question.question}</h2>
+      <h2 className="informationForm">{props.question.question}</h2>
       <Answers question={props.question} answerChoiceHandler={answerChoiceHandler}/>
-      <button onClick={() => props.selectAnswerHandler(answer)}>Confirm & Continue</button>
-      {props.errorMessage ? (<p>Please select an answer!</p>) : null}
+      <button className="questionBtn"onClick={() => props.selectAnswerHandler(answer)}>Confirm & Continue</button>
+      {props.errorMessage ? (<p className="error">Please select an answer!</p>) : null}
     </div>
   );
 }

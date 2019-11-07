@@ -1,12 +1,10 @@
 import React, {useState} from 'react';
 import Question from "./Question";
-import QuestionCount from "./QuestionCount";
 import Result from "./Results";
-import Form from './Form';
 
 function Quiz(props) {
   const questions = [
-    {
+    /*{
       id: 0,
       question: 'How many floors does the Tele2 HQ have?',
       answer_a: '4',
@@ -15,7 +13,6 @@ function Quiz(props) {
       answer_d: '0',
       correct_answer: 'b',
     },
-    
     {
       id: 1,
       question: 'Which is NOT a technology that Tele2 works with?',
@@ -42,7 +39,7 @@ function Quiz(props) {
       answer_c: 'Telenor',
       answer_d: 'Boxer',
       correct_answer: 'b',
-    }, 
+    }, */
     {
       id: 4,
       question: 'What are "Learning Lunches" at Tele2?',
@@ -84,14 +81,19 @@ function Quiz(props) {
   const restartGame = () => {
     setGameState({currentQuestion: questions[0], answers: [], progress: 1, isFinished: false})
   };
+
   return (
     <div className="quiz">
-      {gameState.isFinished || !gameState.currentQuestion ? (
+      {gameState.isFinished || !gameState.currentQuestion &&
+        <div className="results">
         <Result
           answers={gameState.answers}
           questions={questions}
           restartGame={restartGame}/>
-      ) : (
+        </div>
+      }
+      {gameState.currentQuestion &&
+        <div className="questions">
         <Question
           questions={questions}
           progress={gameState.progress}
@@ -99,9 +101,9 @@ function Quiz(props) {
           question={gameState.currentQuestion}
           errorMessage={gameState.errorMessage}
           selectAnswerHandler={selectAnswerHandler}
-        />
-      )}
-      
+          />
+        </div>
+      }
     </div>
   );
 }

@@ -14,25 +14,31 @@ function Result(props) {
       event.preventDefault();
       setSubForm(true);
   }
+
+  const correct = <span className="correct"> - Correct</span>
+  const incorrect = <span className="incorrect"> - Incorrect</span>
+  
   return (
       <div>
           {!subForm && 
     <div>
       {props.questions.map(
         question => (
-          <div key={question.id}>{question.question} {validateAnswer(question) ? "Correct" : "Incorrect"}</div>)
+          <div key={question.id}>{question.question} {validateAnswer(question) ?  correct : incorrect}</div>)
       )}
       
       <>
-      <button onClick={toSubmit}>Want to know more? Hit here!</button>
-      <button onClick={props.restartGame}>Restart Game</button>
+      <button className="restartBtn" onClick={toSubmit}>Want to know more? Hit here!</button>
+      <button className="restartBtn" onClick={props.restartGame}>Restart Game</button>
       </>
       
     </div>
     }
     {subForm &&
         <div>
-             <Form />
+             <Form 
+             restartGame={props.restartGame}
+             />
         </div>
         }
     </div>

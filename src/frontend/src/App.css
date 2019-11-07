@@ -40,6 +40,11 @@ body {
   padding-top: 0;
   padding-bottom: 0;
 }
+
+.questions {
+  min-height: 55vh;
+}
+
 .quiz {
   min-height: 75vh;
   display: flex;
@@ -52,7 +57,7 @@ body {
 
 .logo {
   height: auto;
-  width: 200px;
+  width: 250px;
 }
 
 .mainContainer {
@@ -77,6 +82,7 @@ body {
   height: 150px;
   width: 225px;
   border-radius: 10px;
+  outline: none;
 }
 
 .answers{
@@ -89,10 +95,111 @@ body {
 }
 
 .answer:hover {
-  background-color: green;
-
+  transform: scale(1.1) perspective(1px);
+  color: #4f4c4c;
+  background-color: #c8ffbb;
 }
 
 .answer:focus {
-  background-color: blue;
+  color: #4f4c4c;
+  background-color: #c8ffbb;
 }
+
+.results {
+  min-height: 55vh;
+}
+
+.questionBtn{
+  /* color: #4f4c4c;
+  background-color: #f4f4f4; */
+  color: #d7dee8;
+  background-color: #03142b;
+  padding: 10px 50px;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  outline: none;
+}
+
+.restartBtn {
+  color: #d7dee8;
+  background-color: #03142b;
+  padding: 10px 50px;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-top: 20px;
+  margin: 50px 10px 0px 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  outline: none;
+}
+
+.error {
+  color: #f27c7c;
+}
+
+.correct {
+  color: #c8ffbb;
+}
+
+.incorrect {
+  color: #f27c7c;
+}
+
+.submitBtn {
+  color: #d7dee8;
+  background-color: #03142b;
+  padding: 5px 25px;
+  text-transform: uppercase;
+  font-size: 15px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  outline: none;
+}
+
+.form {
+  width : 550px;
+  height: 50px;
+  margin: 10px;
+  box-sizing: border-box;
+  padding: 20px 0px;
+  border-radius: 7px;
+  outline: none;
+}
+
+.informationForm{
+  white-space: nowrap;
+  font-size: 25px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.info {
+  white-space: nowrap;
+  font-size: 45px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.label{
+  margin-left: 10px;
+  font-size: 15px;
+}
+.GDPR{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+input[type="text"]{
+font-size: 25px;
+}
+
+input[type="email"]{
+  font-size: 25px;
+  }
