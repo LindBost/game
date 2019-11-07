@@ -4,7 +4,7 @@ import Result from "./Results";
 
 function Quiz(props) {
   const questions = [
-    /*{
+    {
       id: 0,
       question: 'How many floors does the Tele2 HQ have?',
       answer_a: '4',
@@ -39,7 +39,7 @@ function Quiz(props) {
       answer_c: 'Telenor',
       answer_d: 'Boxer',
       correct_answer: 'b',
-    }, */
+    },
     {
       id: 4,
       question: 'What are "Learning Lunches" at Tele2?',
@@ -56,7 +56,7 @@ function Quiz(props) {
     answers: [],
     progress: 1,
     isFinished: false,
-    errorMessage: false
+    errorMessage: false,
   });
   const selectAnswerHandler = (answer) => {
 
@@ -79,7 +79,8 @@ function Quiz(props) {
   };
 
   const restartGame = () => {
-    setGameState({currentQuestion: questions[0], answers: [], progress: 1, isFinished: false})
+    setGameState({currentQuestion: questions[0], answers: [], progress: 1, isFinished: false});
+    props.homePage();
   };
 
   return (
