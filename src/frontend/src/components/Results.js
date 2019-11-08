@@ -19,19 +19,17 @@ function Result(props) {
   const incorrect = <span className="incorrect"> - Incorrect</span>
   
   return (
-      <div>
-          {!subForm && 
     <div>
+          {!subForm && 
+      <div>
       {props.questions.map(
         question => (
-          <div key={question.id}>{question.question} {validateAnswer(question) ?  correct : incorrect}</div>)
+          <div className="resultPresentation"key={question.id}>{question.question} {validateAnswer(question) ?  correct : incorrect}</div>)
       )}
-      
       <>
       <button className="restartBtn" onClick={toSubmit}>Want to know more? Hit here!</button>
       <button className="restartBtn" onClick={props.restartGame}>Restart Game</button>
       </>
-      
     </div>
     }
     {subForm &&

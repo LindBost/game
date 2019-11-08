@@ -98,7 +98,7 @@ function Quiz(props) {
       id: 10,
       question: "What does the 2+1 principle mean at Tele2?",
       answer_a: '2 cakes per person',
-      answer_b: 'We hire 2 women for each man, on the departments where gender balance is not reached',
+      answer_b: 'We hire 2 women for each man, on the departments where gender balance is not reached, in our external recruitments',
       answer_c: 'We belive that 1 efficient person can do the work of 2 people under the right conditions',
       answer_d: 'The common goal is that each customer should own 2 phones from Tele2',
       correct_answer: 'b',

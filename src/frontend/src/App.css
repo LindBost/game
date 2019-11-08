@@ -113,7 +113,11 @@ button:hover{
 }
 
 .results {
-  min-height: 55vh;
+  min-height: 70vh;
+}
+
+.resultPresentation {
+  margin: 10px 0px;
 }
 
 .questionBtn{
