@@ -78,6 +78,15 @@ function Quiz(props) {
     },
     {
       id: 8,
+      question: "What does the 2+1 principle mean at Tele2?",
+      answer_a: '2 cakes per person',
+      answer_b: 'We hire 2 women for each man, on the departments where gender balance is not reached, in our external recruitments',
+      answer_c: 'We belive that 1 efficient person can do the work of 2 people under the right conditions',
+      answer_d: 'The common goal is that each customer should own 2 phones from Tele2',
+      correct_answer: 'b',
+    },
+    {
+      id: 9,
       question: "Where is Tele2 HQ located?",
       answer_a: 'Kista',
       answer_b: 'Fridhemsplan',
@@ -86,22 +95,13 @@ function Quiz(props) {
       correct_answer: 'a',
     },
     {
-      id: 9,
+      id: 10,
       question: "What are the values of Tele2?",
       answer_a: 'Blood, Sweat and Tears',
       answer_b: 'Dare, Care, Simplify',
       answer_c: 'Sleep, Eat, Work, Repeat',
       answer_d: 'Fearless, Open, Cost efficient, Reliable, Flexible',
       correct_answer: 'd',
-    },
-    {
-      id: 10,
-      question: "What does the 2+1 principle mean at Tele2?",
-      answer_a: '2 cakes per person',
-      answer_b: 'We hire 2 women for each man, on the departments where gender balance is not reached, in our external recruitments',
-      answer_c: 'We belive that 1 efficient person can do the work of 2 people under the right conditions',
-      answer_d: 'The common goal is that each customer should own 2 phones from Tele2',
-      correct_answer: 'b',
     }
     ];
 
